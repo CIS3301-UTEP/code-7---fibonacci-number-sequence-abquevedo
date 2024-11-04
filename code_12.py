@@ -1,8 +1,6 @@
 import random 
 def get_fibonacci_number(position):
-    if position <= 0:
-        return 0
-    elif position == 1:
+    if position <= 1:
         return 1
     else:
         return get_fibonacci_number(position - 1) + get_fibonacci_number(position - 2)
