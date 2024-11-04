@@ -15,8 +15,13 @@ def get_fibonacci_number(position):
 
 def get_fibonacci_number_sequence(number):
     fibonacci_sequence = []
-    for i in range(number + 1): 
-        fibonacci_sequence.append(get_fibonacci_number(i))
+    if number >= 1:
+        fibonacci_sequence.append(1)
+    if number >= 2:
+        fibonacci_sequence.append(1)
+    for i in range(2, number):
+        fibonacci_sequence.append(fibonacci_sequence[i - 1] + fibonacci_sequence[i - 2])
+        
     return fibonacci_sequence
 
 if __name__ == "__main__":
