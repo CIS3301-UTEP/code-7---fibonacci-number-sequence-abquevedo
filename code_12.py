@@ -10,7 +10,7 @@ def get_fibonacci_number(position):
 
 def get_fibonacci_number_sequence(number):
     fibonacci_sequence = []
-    for i in range(number): 
+    for i in range(number + 1): 
         fibonacci_sequence.append(get_fibonacci_number(i))
     return fibonacci_sequence
 
