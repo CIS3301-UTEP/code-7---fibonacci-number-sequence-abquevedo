@@ -1,12 +1,17 @@
 import random 
 
 def get_fibonacci_number(position):
-    if position <= 0:
+    if position < 0:
+        return 0
+    elif position == 0:
         return 0
     elif position == 1:
         return 1
-    else:
-        return get_fibonacci_number(position - 1) + get_fibonacci_number(position - 2)
+    
+    a, b = 0, 1
+    for _ in range(2, position + 1):
+        a, b = b, a + b
+    return b
 
 def get_fibonacci_number_sequence(number):
     fibonacci_sequence = []
